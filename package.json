@@ -12,7 +12,8 @@
     "lib"
   ],
   "scripts": {
-    "test": "istanbul cover node_modules/.bin/_mocha -- test/*-test.js"
+    "test": "istanbul cover node_modules/.bin/_mocha -- test/*-test.js",
+    "dtslint": "dtslint types"
   },
   "repository": {
     "type": "git",
@@ -29,5 +30,6 @@
   "engines": {
     "node": ">=4"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "types": "./types"
 }
