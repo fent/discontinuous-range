@@ -28,7 +28,7 @@ The total length of all subranges
 ### DRange#add(low, high)
 Adds a subrange
 
-###DRange#add(drange)
+### DRange#add(drange)
 Adds all of another DRange's subranges
 
 ### DRange#subtract(low, high)
