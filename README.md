@@ -69,7 +69,7 @@ Get copy of subranges
 ```js
 var drange = new DRange(1, 4)
 drange.add(6, 8);
-console.log(drange.numbers());
+console.log(drange.subranges());
 /*
 [
   { low: 1, high: 4, length: 4 },
