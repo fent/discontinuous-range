@@ -123,3 +123,38 @@ describe('clone sets', () => {
         assert.equal('[ 0-4, 6-9 ]', erange.toString());
     });
 });
+
+describe('accessing numbers', () => {
+    it('should be able to get contained numbers', () => {
+        var drange = new DRange(1, 4);
+        drange.subtract(2);
+        drange.add(6);
+        var numbers = drange.numbers();
+        assert.deepStrictEqual([1, 3, 4, 6], numbers);
+        drange.subtract(3);
+        assert.deepStrictEqual([1, 3, 4, 6], numbers);
+    });
+});
+
+describe('accessing subranges', () => {
+    it('should be able to get copy of subranges', () => {
+        var drange = new DRange(1, 4);
+        drange.add(6, 8);
+        var subranges = drange.subranges();
+        var expect = [
+            {
+                low: 1,
+                high: 4,
+                length: 4
+            },
+            {
+                low: 6,
+                high: 8,
+                length: 3
+            }
+        ];
+        assert.deepStrictEqual(expect, subranges);
+        drange.subtract(6, 8);
+        assert.deepStrictEqual(expect, subranges);
+    });
+})

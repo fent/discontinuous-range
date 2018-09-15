@@ -47,10 +47,35 @@ Intersect all of another DRange's subranges
 Get the number at the specified index
 
 ```js
-var drange = DRange()
+var drange = new DRange()
 drange.add(1, 10);
 drange.add(21, 30);
 console.log(drange.index(15)); // 25
+```
+
+### DRange#numbers()
+Get contained numbers
+
+```js
+var drange = new DRange(1, 4)
+drange.add(6);
+drange.subtract(2);
+console.log(drange.numbers()); // [1, 3, 4, 6]
+```
+
+### DRange#subranges()
+Get copy of subranges
+
+```js
+var drange = new DRange(1, 4)
+drange.add(6, 8);
+console.log(drange.numbers());
+/*
+[
+  { low: 1, high: 4, length: 4 },
+  { low: 6, high: 8, length: 3 }
+]
+*/
 ```
 
 ### DRange#clone()

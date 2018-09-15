@@ -1,5 +1,7 @@
 import * as DRange from "drange";
 
+type SubRange = DRange.SubRange;
+
 new DRange(); // $ExpectType DRange
 new DRange(1); // $ExpectType DRange
 new DRange(3, 5); // $ExpectType DRange
@@ -26,3 +28,7 @@ drange.index(2); // $ExpectType number
 drange.clone(); // $ExpectType DRange
 
 drange.toString(); // $ExpectType string
+
+drange.numbers(); // $ExpectType number[]
+
+drange.subranges(); // $ExpectType SubRange[]

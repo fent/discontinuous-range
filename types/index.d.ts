@@ -1,4 +1,10 @@
-declare namespace DRange {}
+declare namespace DRange {
+    interface SubRange {
+        low: number;
+        high: number;
+        length: number;
+    }
+}
 
 /**
  * For adding/subtracting sets of range of numbers.
@@ -52,6 +58,16 @@ declare class DRange {
     clone(): this;
 
     toString(): string;
+
+    /**
+     * Get contained numbers
+     */
+    numbers(): number[];
+
+    /**
+     * Get copy of subranges
+     */
+    subranges(): DRange.SubRange[];
 }
 
 export = DRange;
