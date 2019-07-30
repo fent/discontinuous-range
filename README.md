@@ -4,7 +4,7 @@ For adding/subtracting sets of range of numbers.
 
 [![Build Status](https://secure.travis-ci.org/fent/node-drange.svg)](http://travis-ci.org/fent/node-drange)
 [![Dependency Status](https://david-dm.org/fent/node-drange.svg)](https://david-dm.org/fent/node-drange)
-[![codecov](https://codecov.io/gh/fent/node-drange/branch/master/graph/badge.svg)](https://codecov.io/gh/fent/node-drange)
+[![codecov](https://codecov.io/gh/fent/node-drange/branch/master/graph/badge.svg)](https://codecov.io/gh/fent/node-drange) [![Greenkeeper badge](https://badges.greenkeeper.io/fent/node-drange.svg)](https://greenkeeper.io/)
 
 # Usage
 
